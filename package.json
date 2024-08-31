@@ -1,5 +1,7 @@
 {
   "name": "affirmations",
+  "homepage": "https://cassianebel.github.io/affirmations",
+  "base": "/affirmations/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
