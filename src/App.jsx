@@ -18,6 +18,9 @@ function App() {
 
   useEffect(() => {
     fetchAffirmation();
+    localStorage.getItem("brightness") &&
+      setBrightness(localStorage.getItem("brightness"));
+    localStorage.getItem("font") && setFont(localStorage.getItem("font"));
   }, []);
 
   return (

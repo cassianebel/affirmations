@@ -3,6 +3,7 @@ import React from "react";
 const FontPicker = ({ font, setFont }) => {
   const handleFontChange = (event) => {
     setFont(event.target.value);
+    localStorage.setItem("font", event.target.value);
   };
   return (
     <div className="font-picker">
