@@ -59,13 +59,13 @@ header {
   background: var(--zinc-100);
   color: var(--zinc-800);
   opacity: 0.75;
-  transition: height 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
   overflow: hidden;
 }
 .font-picker:hover,
 .font-picker:focus-within {
-  height: fit-content;
+  height: 290px;
 }
 .fonts {
   display: flex;
