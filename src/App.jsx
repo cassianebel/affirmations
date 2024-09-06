@@ -4,6 +4,7 @@ import FontPicker from "./Components/FontPicker";
 import "./App.css";
 
 function App() {
+  const [loading, setLoading] = useState(true);
   const [affirmation, setAffirmation] = useState("");
   const [brightness, setBrightness] = useState(3);
   const [font, setFont] = useState("Comforter");
@@ -14,6 +15,7 @@ function App() {
     );
     const data = await response.json();
     setAffirmation(data.affirmation);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -32,6 +34,7 @@ function App() {
           setBrightness={setBrightness}
         />
       </header>
+      {loading && <div className="loader">Loading...</div>}
       <p className="affirmation" style={{ fontFamily: font }}>
         {affirmation}
       </p>
